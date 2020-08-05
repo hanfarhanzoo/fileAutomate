@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "4f87a640-607d-433e-adff-2885481a5378",
+		"name": "Datamantra",
+		"description": "Datamantra collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZGlrYUBhdXRvbWF0ZS5pZCIsImlkIjoiMTY5Y2Q2MDEtODRhMS00MDdhLTk3MmMtOWE3YmVmNjM1MWE4IiwiY3JlYXRlZF90aW1lIjoiMjAyMC8wNy8zMCAyMzo0ODozMCIsImlhdCI6MTU5NjEyNzcxMH0.QzjqJCnv506O00bVBypd15438rXfI9UjsH4fhk8-yrM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://app.datamantra.id/get/?sheet_id=AturanJamBPJS&query_mode=exact&page=1&limit=1000&field=verifikasi_jam&value=$id&sheet=https://docs.google.com/spreadsheets/d/1h89uZtMNwkH1moxdUq3wIIaBj11vj0orgbmTcG_q_lU/edit?pli=1%23gid=0%23gid=0",
+					"protocol": "https",
+					"host": [
+						"app",
+						"datamantra",
+						"id"
+					],
+					"path": [
+						"get",
+						""
+					],
+					"query": [
+						{
+							"key": "sheet_id",
+							"value": "AturanJamBPJS"
+						},
+						{
+							"key": "query_mode",
+							"value": "exact"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1000"
+						},
+						{
+							"key": "field",
+							"value": "verifikasi_jam"
+						},
+						{
+							"key": "value",
+							"value": "$id"
+						},
+						{
+							"key": "sheet",
+							"value": "https://docs.google.com/spreadsheets/d/1h89uZtMNwkH1moxdUq3wIIaBj11vj0orgbmTcG_q_lU/edit?pli=1%23gid=0%23gid=0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data (Advanced)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZGlrYUBhdXRvbWF0ZS5pZCIsImlkIjoiMTY5Y2Q2MDEtODRhMS00MDdhLTk3MmMtOWE3YmVmNjM1MWE4IiwiY3JlYXRlZF90aW1lIjoiMjAyMC8wNy8zMCAyMzo0ODozMCIsImlhdCI6MTU5NjEyNzcxMH0.QzjqJCnv506O00bVBypd15438rXfI9UjsH4fhk8-yrM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"and\": [\n            {\n                \"operator\": \"=\",\n                \"field\": \"verifikasi_jam\",\n                \"value\": \"$id\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.datamantra.id/query?sheet=https://docs.google.com/spreadsheets/d/1h89uZtMNwkH1moxdUq3wIIaBj11vj0orgbmTcG_q_lU/edit?pli=1%23gid=1674544902&sheet_id=AturanJamBPJS&page=1&limit=20",
+					"protocol": "https",
+					"host": [
+						"api",
+						"datamantra",
+						"id"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "sheet",
+							"value": "https://docs.google.com/spreadsheets/d/1h89uZtMNwkH1moxdUq3wIIaBj11vj0orgbmTcG_q_lU/edit?pli=1#gid=1674544902"
+						},
+						{
+							"key": "sheet_id",
+							"value": "AturanJamBPJS"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRyaWNrYXM5MUBnbWFpbC5jb20iLCJjcmVhdGVkX3RpbWUiOiIyMDIwLzA3LzE0IDIwOjUwOjE5IiwiaWF0IjoxNTk0NzM0NjE5fQ.4VyVMpMDSzGUt6aAolWYESmiLjUlRFrWpjWZbkAx210",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sheet\": \"https://docs.google.com/spreadsheets/d/14mG-7UuuAgfQZY3xWaVCigZNTJmZRBWSYUz6HDG88Hc/edit%23gid=313421794\",\n\t\"data\": {\"nama\":\"komo\", \"class\":\"kocak\",\"owow\":\"gaming\", \"__mmid\":\"9\",\"tf2\":\"okcak\", \"kocak\": \"lool\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://datamantra.matamantra.com/api/update?field=__mmid&value=9&sheet_id=kocakme",
+					"protocol": "https",
+					"host": [
+						"datamantra",
+						"matamantra",
+						"com"
+					],
+					"path": [
+						"api",
+						"update"
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "__mmid"
+						},
+						{
+							"key": "value",
+							"value": "9"
+						},
+						{
+							"key": "sheet_id",
+							"value": "kocakme"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data ( sheet )",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRyaWNrYXM5MUBnbWFpbC5jb20iLCJjcmVhdGVkX3RpbWUiOiIyMDIwLzA3LzE0IDIwOjUwOjE5IiwiaWF0IjoxNTk0NzM0NjE5fQ.4VyVMpMDSzGUt6aAolWYESmiLjUlRFrWpjWZbkAx210",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://datamantra.matamantra.com/api/get/?sheet=https://docs.google.com/spreadsheets/d/14mG-7UuuAgfQZY3xWaVCigZNTJmZRBWSYUz6HDG88Hc/edit?ts=5ef98f01&sheet_id=kocakme&page=1&limit=20&field&value&query_mode",
+					"protocol": "https",
+					"host": [
+						"datamantra",
+						"matamantra",
+						"com"
+					],
+					"path": [
+						"api",
+						"get",
+						""
+					],
+					"query": [
+						{
+							"key": "sheet",
+							"value": "https://docs.google.com/spreadsheets/d/14mG-7UuuAgfQZY3xWaVCigZNTJmZRBWSYUz6HDG88Hc/edit?ts=5ef98f01"
+						},
+						{
+							"key": "sheet_id",
+							"value": "kocakme"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "field",
+							"value": null
+						},
+						{
+							"key": "value",
+							"value": null
+						},
+						{
+							"key": "query_mode",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZGlrYUBhdXRvbWF0ZS5pZCIsImlkIjoiMTY5Y2Q2MDEtODRhMS00MDdhLTk3MmMtOWE3YmVmNjM1MWE4IiwiY3JlYXRlZF90aW1lIjoiMjAyMC8wNy8zMCAyMzo0ODozMCIsImlhdCI6MTU5NjEyNzcxMH0.QzjqJCnv506O00bVBypd15438rXfI9UjsH4fhk8-yrM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sheet\": \"https://docs.google.com/spreadsheets/d/1h89uZtMNwkH1moxdUq3wIIaBj11vj0orgbmTcG_q_lU/edit?pli=1#gid=1797742938\",\n    \"sheet_id\": \"AturanJamBPJS\",\n    \"unique\":\"audienceid\",\n\t\"data\": [\n\t\t\t \t{\n                 \"audienceid\":\"123456789\",\n                 \"untuk_verifikasi\":\"\",\n                 \"jamdong\":\"7\"\n\t\t\t\t }\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.datamantra.id/api/add",
+					"protocol": "https",
+					"host": [
+						"api",
+						"datamantra",
+						"id"
+					],
+					"path": [
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
